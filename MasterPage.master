@@ -1,0 +1,107 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class='alldata'>
+           <header>
+
+                <div class='toleft header_left col6'> <div class='inner'>
+
+                        <ul dir="ltr">  
+                      <li> <asp:HyperLink ID="HyperLink8" NavigateUrl="~/Admin/mainusermanager.aspx" runat="server">Admin</asp:HyperLink></li> 
+                        <li> <asp:HyperLink ID="HyperLink6" NavigateUrl="~/Account/Register.aspx" runat="server">New User</asp:HyperLink></li>
+                          <li>  <asp:LoginStatus ID="LoginStatus1" runat="server" LoginText="Log in" LogoutText="Log out" LogoutPageUrl="~/Default.aspx" /></li>
+ 
+
+                       <li> <asp:LoginName ID="LoginName1" runat="server" /></li>
+                            
+                      
+
+                        
+                        </ul>
+
+
+                    </div></div>
+                <div class='toright header_right col6'> <div class='inner logo'>
+                      <%--  <img src="css/images/..logo.png" alt=""/>--%>
+
+                          <img   src="<%=ResolveUrl("~/css/images/logo.png")%>" alt="" />
+
+
+                        <span class='logotext'>
+                            king khalid university
+                        </span>
+
+
+
+                    </div></div>
+                <nav>
+                    <ul>
+                 
+  <li class="act"> <asp:HyperLink  ID="HyperLink5" runat="server" NavigateUrl="~/Default.aspx"><span>Home</span></asp:HyperLink> </li>
+                        
+         <li> <asp:HyperLink  ID="HyperLink1" runat="server"  NavigateUrl="~/members/Allproduct.aspx"><span>View Product</span></asp:HyperLink> </li>                 
+                       
+      <li> <asp:HyperLink  ID="HyperLink2" runat="server" NavigateUrl="~/members/Addadvertise.aspx"><span>Add advertise </span></asp:HyperLink> </li>   
+
+          <li> <asp:HyperLink  ID="HyperLink3" runat="server" NavigateUrl="~/members/mainusermanager.aspx"><span>Follow Requests </span></asp:HyperLink> </li>
+           <%--<li> <asp:HyperLink  ID="HyperLink9" runat="server" NavigateUrl="~/members/Personaldata.aspx"><span>بياناتى الشخصية </span></asp:HyperLink> </li>--%>
+
+           <li> <asp:HyperLink  ID="HyperLink10" runat="server" NavigateUrl="~/badellaws.aspx"><span> Badel Laws </span></asp:HyperLink> </li>
+
+ 
+ 
+
+         
+                     
+                    </ul> 
+                </nav>
+            </header>
+           
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+ 
+    </div>
+    <footer>
+            <div class='alldata'>
+                <div class='data col3'>
+                    <ul>
+                        <li> <a href="/"> About us          </a></li>
+                        <li> <a href="/">  our college          </a></li>
+                      
+                    </ul> 
+
+
+                </div>
+                <div class='data col3'>    <ul>
+                        <li> <a href="/"> About us         </a></li>
+                        <li> <a href="/"> our college         </a></li>
+                     
+                    </ul> </div>
+                <div class='data col3'>
+
+                    <div class='slinks'>
+                        <i class="fa fa-google-plus" aria-hidden="true"></i>
+                        <i class="fa fa-youtube" aria-hidden="true"></i>
+                        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </div>
+
+                </div>
+                <div class='data col3'></div>
+            </div>
+        </footer>
+    </form>
+</body>
+</html>
